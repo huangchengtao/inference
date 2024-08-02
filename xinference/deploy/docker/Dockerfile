@@ -36,5 +36,8 @@ RUN pip install --upgrade -i "$PIP_INDEX" pip && \
     pip install -i "$PIP_INDEX" --no-deps "." && \
     # clean packages
     pip cache purge
+    
+# 在当前工作目录下创建 app 文件夹
+RUN mkdir -p /opt/inference/app
 
 ENTRYPOINT []
